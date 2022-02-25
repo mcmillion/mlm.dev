@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "npm run lint:eslint && npm run lint:tsc",
+    "lint:eslint": "next lint",
+    "lint:tsc": "tsc --noEmit"
   },
   "dependencies": {
     "next": "12.1.0",
