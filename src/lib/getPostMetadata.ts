@@ -7,9 +7,13 @@ export function getPostMetadata(): PostMetadata[] {
   const posts = files.map((file) => {
     const slug = file.replace(".md", "");
     const contents = fs.readFileSync(`posts/${file}`, "utf-8");
-    const { data: metadata } = matter(contents);
+    const { excerpt, data: metadata } = matter(contents, { excerpt: true });
 
-    return { slug, ...metadata } as PostMetadata;
+    return {
+      slug,
+      excerpt: excerpt ? excerpt : null, // Force except to null if it's empty
+      ...metadata,
+    } as PostMetadata;
   });
 
   return posts.sort(sortByPostReverseDate);

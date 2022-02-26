@@ -3,4 +3,5 @@ interface PostMetadata {
   slug: string;
   socialImage: string;
   title: string;
+  excerpt: string | null;
 }
