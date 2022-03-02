@@ -8,6 +8,6 @@
   }
 
   .dark-overlay {
-    @apply bg-gray-900 bg-opacity-50 text-white;
+    @apply bg-gray-900 bg-opacity-70 text-white;
   }
 }

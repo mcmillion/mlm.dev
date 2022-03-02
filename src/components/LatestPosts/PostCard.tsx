@@ -20,7 +20,7 @@ export const PostCard = (props: Props) => {
           objectFit="cover"
           alt=""
         />
-        <h2 className="bottom-float p-2 dark-overlay font-bold">{title}</h2>
+        <span className="bottom-float p-2 dark-overlay font-bold">{title}</span>
       </a>
     </Link>
   );
