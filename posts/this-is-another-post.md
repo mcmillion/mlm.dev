@@ -1,7 +1,12 @@
 ---
 title: 'This is Another Post'
+description: 'I talk about a thing with some stuff'
+image: '/images/test-image-02.jpg'
 date: '2022-02-26'
-socialImage: '/images/test-image-02.jpg'
+tags:
+  - javascript
+  - code
+  - whatever
 ---
 
 # Technically this post hasn't even happened yet

@@ -6,14 +6,14 @@ interface Props {
 }
 
 export const PostCard = (props: Props) => {
-  const { slug, title, socialImage } = props.post;
+  const { slug, title, image } = props.post;
 
   return (
     <Link href={`/posts/${slug}`}>
       <a className="relative">
         <Image
           className="object-cover"
-          src={socialImage}
+          src={image}
           layout="responsive"
           height="300"
           width="600"

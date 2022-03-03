@@ -1,10 +1,10 @@
 import type { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
-import { getPostMetadata } from "lib/getPostMetadata";
+import { getPostsMetadata } from "lib/post";
 import { LatestPosts } from "components/LatestPosts";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getPostMetadata();
+  const posts = getPostsMetadata();
 
   return {
     props: { posts },

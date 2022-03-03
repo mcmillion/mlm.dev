@@ -1,8 +1,11 @@
 interface PostMetadata {
   date: string;
   slug: string;
-  socialImage: string;
+  image: string;
   title: string;
+  description: string;
+  tags: string[];
+  timeToRead: string;
 }
 
 interface Post {

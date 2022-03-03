@@ -1,12 +1,10 @@
 import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import ReactMarkdown from "react-markdown";
-import { getValidSlugPaths } from "lib/getValidSlugPaths";
-import { getPost } from "lib/getPost";
-import { CodeBlock } from "components/CodeBlock";
+import { getValidPostSlugs, getPost } from "lib/post";
+import { PostHeader, PostContent } from "components/Post";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getValidSlugPaths();
+  const paths = getValidPostSlugs();
 
   return {
     paths,
@@ -30,22 +28,21 @@ interface Props {
 
 const Post: NextPage<Props> = (props: Props) => {
   const { metadata, content } = props;
-
-  console.log("CONTENT", content);
-  console.log("METADATA", metadata);
+  const { title, description, tags } = metadata;
 
   return (
     <>
-      <ReactMarkdown
-        className="prose lg:prose-xl"
-        components={{
-          code(props) {
-            return <CodeBlock {...props} />;
-          },
-        }}
-      >
-        {content}
-      </ReactMarkdown>
+      <Head>
+        <title>{title} - Matthew McMillion</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={tags.join(" ")} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <article className="prose lg:prose-xl mx-auto p-8">
+        <PostHeader metadata={metadata} />
+        <PostContent content={content} />
+      </article>
     </>
   );
 };
