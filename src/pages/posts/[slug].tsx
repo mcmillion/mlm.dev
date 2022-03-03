@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { getValidPostSlugs, getPost } from "lib/post";
-import { PostHeader, PostContent } from "components/Post";
+import { PostLayout, PostHeader, PostContent } from "components/Post";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getValidPostSlugs();
@@ -39,10 +39,10 @@ const Post: NextPage<Props> = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <article className="prose lg:prose-xl dark:prose-invert mx-auto p-8">
+      <PostLayout>
         <PostHeader metadata={metadata} />
         <PostContent content={content} />
-      </article>
+      </PostLayout>
     </>
   );
 };

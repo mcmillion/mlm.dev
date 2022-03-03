@@ -12,7 +12,7 @@ export const PostCard = (props: Props) => {
     <Link href={`/posts/${slug}`}>
       <a className="relative">
         <Image
-          className="object-cover"
+          className="object-cover rounded-lg"
           src={image}
           layout="responsive"
           height="300"
@@ -20,7 +20,9 @@ export const PostCard = (props: Props) => {
           objectFit="cover"
           alt=""
         />
-        <span className="bottom-float p-2 dark-overlay font-bold">{title}</span>
+        <span className="bottom-float p-2 dark-overlay font-bold rounded-b-lg">
+          {title}
+        </span>
       </a>
     </Link>
   );
