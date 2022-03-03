@@ -11,7 +11,14 @@ export const ImageBlock = (props: Props) => {
 
   return (
     <div className="my-14">
-      <Image src={src} width="800" height="450" objectFit="cover" alt="" />
+      <Image
+        className="rounded-lg"
+        src={src}
+        width="800"
+        height="450"
+        objectFit="cover"
+        alt=""
+      />
     </div>
   );
 };

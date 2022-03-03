@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
+  .debug {
+    @apply border border-dashed border-red-500;
+  }
+
   .bottom-float {
     @apply absolute bottom-0 left-0 right-0;
   }
@@ -10,4 +14,8 @@
   .dark-overlay {
     @apply bg-gray-900 bg-opacity-70 text-white;
   }
+}
+
+body {
+  @apply bg-white dark:bg-gray-900;
 }

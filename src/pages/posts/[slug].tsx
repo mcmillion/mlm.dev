@@ -39,7 +39,7 @@ const Post: NextPage<Props> = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <article className="prose lg:prose-xl mx-auto p-8">
+      <article className="prose lg:prose-xl dark:prose-invert mx-auto p-8">
         <PostHeader metadata={metadata} />
         <PostContent content={content} />
       </article>
