@@ -32,7 +32,7 @@
 
   .header {
     @apply grid justify-between items-center content-center;
-    @apply p-8 border-b;
+    @apply p-8 mb-8 border-b;
     @apply text-gray-700 border-gray-200;
     @apply dark:text-gray-300 dark:border-gray-700;
 
@@ -40,7 +40,7 @@
   }
 
   .footer {
-    @apply p-8  border-t;
+    @apply p-8 mt-8 border-t;
     @apply text-gray-500 border-gray-200;
     @apply dark:border-gray-700;
   }

@@ -26,9 +26,16 @@ const Home: NextPage<Props> = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>Main Page Content, Bio, Short Resume, Whatever</div>
+      <div className="min-h-screen flex flex-col">
+        <div className="flex-1">
+          <div>Main Page Content, Bio, Short Resume, Whatever</div>
+          <LatestPosts posts={posts} count={2} />
+        </div>
 
-      <LatestPosts posts={posts} count={3} />
+        <footer className="flex-none text-center footer">
+          <p>Made with ♥️ in Little Rock</p>
+        </footer>
+      </div>
     </>
   );
 };

@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import Image from "next/image";
 import Link from "next/link";
 
 const BackToPosts = () => (
@@ -40,7 +39,7 @@ export const PostLayout = (props: Props) => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="flex-none p-8 header">
+      <header className="flex-none header">
         <BackToPosts />
         <HeaderAvatar />
         <TwitterLink />
@@ -50,7 +49,7 @@ export const PostLayout = (props: Props) => {
         {children}
       </article>
 
-      <footer className="flex-none p-8 text-center footer">
+      <footer className="flex-none text-center footer">
         <p>Made with ♥️ in Little Rock</p>
       </footer>
     </div>
