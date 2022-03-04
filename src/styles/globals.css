@@ -30,6 +30,10 @@
     @apply dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300;
   }
 
+  .bold-text {
+    @apply font-bold text-black dark:text-white;
+  }
+
   .header {
     @apply grid justify-between items-center content-center;
     @apply p-8 mb-8 border-b;

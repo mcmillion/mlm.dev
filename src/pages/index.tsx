@@ -2,6 +2,7 @@ import type { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
 import { getPostsMetadata } from "lib/post";
 import { LatestPosts } from "components/LatestPosts";
+import { Splash } from "components/Splash";
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getPostsMetadata();
@@ -28,7 +29,7 @@ const Home: NextPage<Props> = (props: Props) => {
 
       <div className="min-h-screen flex flex-col">
         <div className="flex-1">
-          <div>Main Page Content, Bio, Short Resume, Whatever</div>
+          <Splash />
           <LatestPosts posts={posts} count={2} />
         </div>
 
