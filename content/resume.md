@@ -4,7 +4,7 @@ Just crushing it.
 
 # Previous Experience
 
-## Principal Engineer / Stitch Fix / San Franciisco, CA / 2017-Present
+## Principal Engineer / Stitch Fix / San Franciisco, CA / 2017-2021
 - Successfully mentored a team of full-stack Rails developers on React patterns and architecture, helping them to build multiple new React-based frontends for major internal and client-facing applications.
 - Led effort to rebuild the styling team's expert-use web application frontend in React.
 - Automated existing local development setup with Docker and decreased developer onboarding time from ~1 week to ~1 day.
