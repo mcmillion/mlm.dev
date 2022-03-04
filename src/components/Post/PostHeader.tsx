@@ -25,7 +25,7 @@ export const PostHeader = (props: Props) => {
         </div>
 
         <div>
-          {tags.map((tag) => (
+          {tags?.map((tag) => (
             <Tag key={tag} value={tag} />
           ))}
         </div>
