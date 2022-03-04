@@ -56,7 +56,7 @@ const Content = styled.Text`
 `;
 ```
 
-# Taking it a Step Further with Currying and Helpers
+# Taking It a Step Further with Currying and Helpers
 
 This is a great start, but we can make it better. The `${(props) => props.theme.textColor};` pattern is a bit cumbersome and verbose, and as our app grows in size and complexity, we'll soon find ourselves nesting values in our theme to organize it into a hierarchy for maintainability. This means our token keys will become longer and longer. What if we decide we need to do some other processing before returning a token to account for user preferences? Luckily, we can leverage [currying](https://javascript.info/currying-partials) to clean things up a bit. I'm going to cheat and use [get](https://lodash.com/docs/4.17.15#get) from [lodash-es](https://github.com/lodash/lodash) for simplicity:
 
