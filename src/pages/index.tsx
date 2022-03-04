@@ -29,7 +29,6 @@ const Home: NextPage<Props> = (props: Props) => {
       <div className="min-h-screen flex flex-col">
         <div className="flex-1">
           <Splash />
-
           <LatestPosts posts={posts} count={2} />
         </div>
 
