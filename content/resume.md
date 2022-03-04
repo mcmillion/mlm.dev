@@ -1,6 +1,6 @@
 # Currently
 
-Just crushing it.
+Looking for the next big thing.
 
 # Previous Experience
 

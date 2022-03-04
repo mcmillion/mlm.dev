@@ -4,13 +4,11 @@ import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { getResume } from "lib/resume";
 
-export const getStaticProps: GetStaticProps = async () => {
-  const resume = getResume();
-
-  return {
-    props: { resume },
-  };
-};
+export const getStaticProps: GetStaticProps = async () => ({
+  props: {
+    resume: getResume(),
+  },
+});
 
 interface Props {
   resume: string;
