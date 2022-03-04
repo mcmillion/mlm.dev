@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { parse, format } from "date-fns";
 import { ImageBlock, Tag } from "components/Post";
 
 interface Props {
@@ -8,7 +8,8 @@ interface Props {
 export const PostHeader = (props: Props) => {
   const { metadata } = props;
   const { title, date, timeToRead, tags, image } = metadata;
-  const formattedDate = format(new Date(date), "MMMM do, y");
+  const parsedDate = parse(date, "yyyy-MM-dd", new Date());
+  const formattedDate = format(parsedDate, "MMMM do, y");
 
   return (
     <>

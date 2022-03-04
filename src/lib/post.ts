@@ -50,9 +50,9 @@ function parseMetadata(filename: string) {
   return {
     content,
     metadata: {
+      ...data,
       slug,
       timeToRead,
-      ...data,
     } as PostMetadata,
   };
 }
