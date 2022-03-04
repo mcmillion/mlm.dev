@@ -21,6 +21,12 @@ export const Head = (props: Props) => {
       <meta property="og:description" content={description} />
       {imageUrl && <meta property="og:image" content={imageUrl} />}
 
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:site" content="@mattisadev" />
+      <meta name="twitter:description" content={description} />
+      {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+
       <link
         rel="apple-touch-icon"
         sizes="180x180"
