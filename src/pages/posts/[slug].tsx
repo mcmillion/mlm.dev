@@ -1,7 +1,6 @@
 import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
-import Head from "next/head";
 import { getValidPostSlugs, getPost } from "lib/post";
-import { getAbsoluteURL } from "lib/vercel";
+import { Head } from "components/Head";
 import { PostLayout, PostHeader, PostContent } from "components/Post";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -29,22 +28,11 @@ interface Props {
 
 const Post: NextPage<Props> = (props: Props) => {
   const { metadata, content } = props;
-  const { title, description, image, tags } = metadata;
-  const imageUrl = getAbsoluteURL(image);
+  const { title, description, image } = metadata;
 
   return (
     <>
-      <Head>
-        <title>{title} - Matthew McMillion</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={tags?.join(" ")} />
-
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={imageUrl} />
-
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Head title={title} description={description} image={image} />
 
       <PostLayout>
         <PostHeader metadata={metadata} />

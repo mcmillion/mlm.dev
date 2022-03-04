@@ -1,6 +1,6 @@
 import type { NextPage, GetStaticProps } from "next";
-import Head from "next/head";
 import { getPostsMetadata } from "lib/post";
+import { Head } from "components/Head";
 import { LatestPosts } from "components/LatestPosts";
 import { Splash } from "components/Splash";
 
@@ -21,15 +21,15 @@ const Home: NextPage<Props> = (props: Props) => {
 
   return (
     <>
-      <Head>
-        <title>Matthew McMillion</title>
-        <meta name="description" content="Matthew McMillion, Developer" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Head
+        title="Home"
+        description="Personal Site of Matthew McMillion, Full-Stack Developer"
+      />
 
       <div className="min-h-screen flex flex-col">
         <div className="flex-1">
           <Splash />
+
           <LatestPosts posts={posts} count={2} />
         </div>
 
