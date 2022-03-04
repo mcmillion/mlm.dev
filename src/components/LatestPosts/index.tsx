@@ -9,6 +9,8 @@ export const LatestPosts = (props: Props) => {
   const { posts, count } = props;
   const latestPosts = posts.slice(0, count);
 
+  if (latestPosts.length === 0) return null;
+
   return (
     <section className="p-8">
       <h1 className="mb-8 text-4xl bold-text">Latest Posts</h1>
