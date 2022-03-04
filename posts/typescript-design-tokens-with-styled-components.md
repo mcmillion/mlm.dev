@@ -9,7 +9,7 @@ tags:
   - design
   - ui
 ---
-[Design tokens](https://specifyapp.com/blog/introduction-to-design-tokens) are an invaluable tool when building complex interfaces. They provide a foundation for component libraries and inform one-off and future component designs. One of the reasons I love [Tailwind](https://tailwindcss.com) so much is that it provides a beautiful set of design tokens right out of the box. But what do we reach for when Tailwind isn't an option or we've outgrown it?
+[Design tokens](https://specifyapp.com/blog/introduction-to-design-tokens) are an invaluable tool when building complex interfaces. They provide a foundation for component libraries and inform one-off and future component designs. One of the reasons I love [Tailwind](https://tailwindcss.com) so much is that it provides a beautiful set of design tokens right out of the box, but what do we reach for when Tailwind isn't an option or we've outgrown it?
 
 I recently ran into this issue on a [TypeScript](https://www.typescriptlang.org)-based [React Native](https://reactnative.dev) project. While React Native does a fantastic job of abstracting away things like styling, _styling components in React Native is not the same as styling components with CSS_. Some very talented developers have put a lot of effort into some fantastic tools like [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn) to help with this, but I prefer to use [Styled Components](https://styled-components.com) as it helps to cut down on visual clutter when building complex views. Because of this, Tailwind was also no longer an option, so I needed to reach for another system for managing design tokens. But how do we manage a custom design token system in Styled Components while maintaining the type-safety that TypeScript provides?
 
@@ -58,7 +58,7 @@ const Content = styled.Text`
 
 # Taking it a Step Further with Currying and Helpers
 
-This is a great start, but we can make it better. The `${(props) => props.theme.textColor};` pattern is a bit cubmersome and verbose, and as our app grows in size and complexity, we'll soon find ourselves nesting values in our theme to organize it into a hieracrhcy for maintainabiity. This means our token keys will become longer and longer. What if we decide we need to do some other processing before returning a token to account for user preferences? Luckily, we can leverage [currying](https://javascript.info/currying-partials) to clean things up a bit. I'm going to cheat and use [get](https://lodash.com/docs/4.17.15#get) from [lodash-es](https://github.com/lodash/lodash) for simplicity:
+This is a great start, but we can make it better. The `${(props) => props.theme.textColor};` pattern is a bit cumbersome and verbose, and as our app grows in size and complexity, we'll soon find ourselves nesting values in our theme to organize it into a hierarchy for maintainability. This means our token keys will become longer and longer. What if we decide we need to do some other processing before returning a token to account for user preferences? Luckily, we can leverage [currying](https://javascript.info/currying-partials) to clean things up a bit. I'm going to cheat and use [get](https://lodash.com/docs/4.17.15#get) from [lodash-es](https://github.com/lodash/lodash) for simplicity:
 
 ```ts
 import { get } from "lodash-es";
@@ -125,4 +125,4 @@ const Content = styled.Text`
 
 There are a couple of things we learned here that can be helpful elsewhere:
 - Currying can be useful in Styled Components by making additional helpers that rely on values from `theme` or `props`.
-- Generating types for object keys can be used elsewhere, such as [internationalization](https://react.i18next.com/latest/typescript)
+- Generating types for object keys can be used elsewhere, such as [internationalization](https://react.i18next.com/latest/typescript).
