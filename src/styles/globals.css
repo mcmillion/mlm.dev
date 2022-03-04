@@ -52,8 +52,5 @@
 
 html, body {
   @apply min-h-screen;
-}
-
-body {
   @apply bg-white dark:bg-gray-900;
 }
