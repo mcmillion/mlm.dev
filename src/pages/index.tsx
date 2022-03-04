@@ -4,13 +4,9 @@ import { Head } from "components/Head";
 import { LatestPosts } from "components/LatestPosts";
 import { Splash } from "components/Splash";
 
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = getPostsMetadata();
-
-  return {
-    props: { posts },
-  };
-};
+export const getStaticProps: GetStaticProps = async () => ({
+  props: { posts: getPostsMetadata() },
+});
 
 interface Props {
   posts: PostMetadata[];

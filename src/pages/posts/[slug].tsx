@@ -3,14 +3,10 @@ import { getValidPostSlugs, getPost } from "lib/post";
 import { Head } from "components/Head";
 import { PostLayout, PostHeader, PostContent } from "components/Post";
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getValidPostSlugs();
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: getValidPostSlugs(),
+  fallback: false,
+});
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const slug = context.params?.slug as string;
