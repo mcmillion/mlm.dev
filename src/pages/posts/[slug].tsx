@@ -35,7 +35,7 @@ const Post: NextPage<Props> = (props: Props) => {
       <Head>
         <title>{title} - Matthew McMillion</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content={tags.join(" ")} />
+        <meta name="keywords" content={tags?.join(" ")} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
