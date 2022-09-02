@@ -9,6 +9,7 @@ tags:
   - design
   - ui
 ---
+
 [Design tokens](https://specifyapp.com/blog/introduction-to-design-tokens) are an invaluable tool when building complex interfaces. They provide a foundation for component libraries and inform one-off and future component designs. One of the reasons I love [Tailwind](https://tailwindcss.com) so much is that it provides a beautiful set of design tokens right out of the box, but what do we reach for when Tailwind isn't an option or we've outgrown it?
 
 I recently ran into this issue on a [TypeScript](https://www.typescriptlang.org)-based [React Native](https://reactnative.dev) project. While React Native does a fantastic job of abstracting away things like styling, _styling components in React Native is not the same as styling components with CSS_. Some very talented developers have put a lot of effort into some fantastic tools like [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn) to help with this, but I prefer to use [Styled Components](https://styled-components.com) as it helps to cut down on visual clutter when building complex views. Because of this, Tailwind was also no longer an option, so I needed to reach for another system for managing design tokens. But how do we manage a custom design token system in Styled Components while maintaining the type-safety that TypeScript provides?

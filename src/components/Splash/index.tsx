@@ -21,8 +21,7 @@ export const Splash = () => {
       <p>a full-stack developer</p>
       <p>building things with </p>
       <p>
-        <span className="bold-text">TypeScript</span> and{" "}
-        <span className="bold-text">Rust</span>
+        <span className="bold-text">TypeScript</span>
       </p>
     </section>
   );
