@@ -8,7 +8,6 @@ tags:
   - react
   - react-query
   - zod
-  - api
 ---
 
 While my current stack of choice is based on the fantastic [T3 Stack](https://github.com/t3-oss/create-t3-app) utilizing [tRPC](https://github.com/trpc/trpc), I'm also the lead frontend developer on a JavaScript React app created with [Create React App](https://create-react-app.dev) backed by a Rails API. As I port this app to TypeScript, I find myself yearning for the automatic type-safety that tRPC provides.
