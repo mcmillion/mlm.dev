@@ -1,6 +1,6 @@
 ---
 title: Modern React Data-Fetching with TypeScript, React-Query, and Zod
-description: Leverage type-safety while working with a custom design token system in Styled Components
+description: Leverage type-safety while working with untyped APIs
 image: /images/modern-react-data-fetching-with-typescript-query-zod.jpg
 date: '2022-09-02'
 tags:
